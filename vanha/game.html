@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Adventure Game</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+
+    <script src="./script.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #game {
+            margin-top: 20px;
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .movementbutton {
+            margin: 20px;
+        }
+        .movementbutton button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        #fuel, #mission, #steps {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #steps ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #steps li {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="intro">
+        <button id="startGame" onclick=startGame()>Start Game</button>
+        <h1>Welcome to the Ocean Adventure Game!</h1>
+    </div>
+
+        <div onclick="startGame()">
+        <img id="airplane_img" src="../vanha/airplane.png" alt="Airplane Image">
+        <div id="game" style="display: none;">
+        <div id="map" style="width: 600px; height: 400px;"></div>
+        <div>
+            <img   airplan.png="'static', filename='airplane.png') }}" alt="Airplane">
+
+
+        </div>
+
+        <div class="movementbutton">
+            <button onclick="setDirection('Up')">Up</button>
+            <button onclick="setDirection('Down')">Down</button>
+            <button onclick="setDirection('Left')">Left</button>
+            <button onclick="setDirection('Right')">Right</button>
+        </div>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="startFlight()">Start Flight</button>
+        <button onclick="completeMission()">Complete Mission</button>
+        <button onclick="returnToStart()">Return to Start</button>
+
+        <div id="fuel">Fuel: 100%</div>
+        <div id="mission">Mission: Explore The Ocean</div>
+
+        <div id="steps">
+            <h3>Steps Taken:</h3>
+            <ul id="stepList"></ul>
+        </div>
+    </div>
+
+</body>
+</html>

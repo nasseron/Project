@@ -1,0 +1,65 @@
+/* styles.css */
+body {
+    font-font: Arial, sans-serif;
+}
+#game {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+#map {
+    position: relative;
+    height: fit-content; /* Full viewport height */
+    width: 300px;   /* Full width */
+    position: absolute;
+    z-index: 1;
+}
+#airplane_img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+
+}
+button {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 5px;
+}
+#steps {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+}
+#stepsList {
+    list-style-type: none;
+    padding: 0;
+}
+#fuel, #mission, #steps {
+    margin-top: 10px;
+}
+/* Add styles for other elements to ensure they are visible */
+#intro, #game, #buttons, #airplane_img {
+    display: block;
+    margin: 10px;
+}
+/* Cursor styles */
+.leaflet-grab {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+.movementbutton{
+    display: block;
+    grid: auto;
+    height:50;
+    width:100;
+}
